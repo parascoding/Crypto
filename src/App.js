@@ -8,7 +8,7 @@ const [coins,setCoins]=useState([])
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=100&page=1&sparkline=false')
     .then(res=>{
       setCoins(res.data);
-      console.log(res.data);
+      // console.log(res.data);
     })
     .catch(error=>console.log(error));
   },[]);
@@ -27,18 +27,16 @@ const filteredCoins=coins.filter(coin =>
           Search a currency
         </h1>
         <form >
-          <input type='text' placeholder='search' className='coint-input' onChange={handleChange}>
-          </input>
+          <input type='text' placeholder='search' className='coint-input' onChange={handleChange}/>
         </form>
       </div>
-      {filteredCoins.map(coin=>{
-        return(
-          <Coin 
-          key={coin.id} name={coin.name} image={coin.image} price={coin.current_price} symbol={coin.symbol}
-          />
-
-        );
-      })}
+        {filteredCoins.map(coin=>{
+          return(
+            <Coin 
+            key={coin.id} name={coin.name} image={coin.image} price={coin.current_price} symbol={coin.symbol}
+            />
+          );
+        })}
     </div>
   );
 }

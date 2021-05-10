@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './Coin.css'
 const Coin=({name, image, symbol, price, volume})=>{
     return(
         <div className='coin-container'>
@@ -9,7 +9,7 @@ const Coin=({name, image, symbol, price, volume})=>{
                 <h1>
                     {name}
                 </h1>
-                <p className='coin-sybol'>{symbol}</p>
+                <p className='coin-symbol'>{symbol}</p>
                 </div>
                 <div className='coin-data'>
                     <p className='coin-price'>
