@@ -29,7 +29,7 @@ return (
 
   <div className="coin-app">
     <div className="button">
-      <button onClick={display}>Click me</button>
+      <button onClick={display}>kick me</button>
     </div>
     <div className='coin-search'>
       <h1 className='coint-text'>
