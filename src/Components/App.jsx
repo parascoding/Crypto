@@ -27,9 +27,9 @@ const App=()=>{
   }
   return (
     <>
-      <div className="menu">
+      {/* <div className="menu">
         <NavLink to="/buyCoins">Click Here</NavLink>
-      </div>
+      </div> */}
       {/* <DisplayCoins/> */}
       <div className="coin-app">
         <div className="button">
