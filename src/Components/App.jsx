@@ -5,7 +5,7 @@ import axios from 'axios'
 import '../Coin.css'
 // import {NavLink} from 'react-router-dom'
 
-const App=()=>{
+const App = () => {
   const [coins, setCoins] = useState([])
   useEffect(() => {
     axios.get('https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=25&page=1&sparkline=false')
@@ -22,7 +22,7 @@ const App=()=>{
   const filteredCoins = coins.filter(coin =>
     coin.name.toLowerCase().includes(search.toLowerCase())
   )
-  const responseGoogle=response=>{
+  const responseGoogle = response => {
     console.log(response);
   }
   return (
@@ -32,13 +32,11 @@ const App=()=>{
       </div> */}
       {/* <DisplayCoins/> */}
       <div className="coin-app">
-        <div className="button">
-          {/* <button onClick={display}>ick me</button> */}
-        </div>
+        
         <div className='coin-search'>
-          <h1 className='coint-text'> 
+          <h1 className='coint-text'>
             Search a currency
-      </h1>
+          </h1>
           <form >
             <input type='text' placeholder='Search' className='coin-input' onChange={handleChange} />
           </form>
@@ -46,12 +44,11 @@ const App=()=>{
         {filteredCoins.map(coin => {
           return (
             <Coin
-              key={coin.id} name={coin.name} image={coin.image} price={coin.current_price} symbol={coin.symbol}
+              key={coin.id} name={coin.name} image={coin.image} price={coin.current_price} symbol={coin.symbol} change={coin.price_change_percentage_24h}
             />
           );
         })}
       </div>
-      
     </>
   );
 }

@@ -8,9 +8,9 @@ const Main = () => {
     return (
         <>
             <BrowserRouter>
-                <Nav/>
+                {/* <Nav/> */}
                 <Switch>
-                    <Route exact path="/Market" component={App} />
+                    <Route exact path="/" component={App} />
                     <Route path="/buyCoins" component={Buy_coins} />
                 </Switch>
             </BrowserRouter>

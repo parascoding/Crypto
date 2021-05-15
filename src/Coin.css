@@ -14,6 +14,7 @@
     display: flex;
     align-items: center;
     padding: auto;
+    font-size: 10px;
 }
 .coin h1{
     height: 40px;
@@ -28,15 +29,18 @@
     width: 50px;
     margin-right: 10px;
     margin-left: 50px;
+    margin-bottom: 12px;
 
 }
 .coin-symbol{
     text-transform: uppercase;
     width: 550px;
-    margin-left:419px;
+    margin-left:309px;
     justify-content: center;
     display: flex;
+    font-size: medium;
     flex-direction: column;
+    
 }
 .coin-data{
     display: flex;
@@ -46,6 +50,8 @@
 }
 .coin-price{
     width: 210px;
+    font-size: 20px;
+    margin-left: -200px;
 }
 .coin-search{
     margin-bottom: 64px;
@@ -57,7 +63,9 @@
 .coin-text{
     margin-bottom: 30px;
     text-align: center;
+    font-size: 2px;
 }
+
 .coin-input{
     padding-left: 18px;
     width: 300px;
@@ -78,3 +86,15 @@
     background-color: #1a1a1c;
     color: #fff;
 } */
+.coin-percentage-neg{
+    color: red;
+    font-size: 20px;
+    margin-left: 120px;
+}
+
+
+.coin-percentage-pos{
+    color: green;
+    margin-left: 120px;
+    font-size: 20px;
+}
