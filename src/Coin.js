@@ -22,7 +22,7 @@ const Coin = ({ name, image, symbol, price, change}) => {
                     
                     <p className={neg?"coin-percentage-neg":"coin-percentage-pos"}>
                         {change}%
-                    </p>
+                    </p>    
                 </div>
             </div>
         </div>
