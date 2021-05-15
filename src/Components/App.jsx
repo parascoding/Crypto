@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../Coin.css'
 // import {NavLink} from 'react-router-dom'
-
+import './nav.css'
 const App = () => {
   const [coins, setCoins] = useState([])
   useEffect(() => {
@@ -41,11 +41,19 @@ const App = () => {
             <input type='text' placeholder='Search' className='coin-input' onChange={handleChange} />
           </form>
         </div>
+        <div className="headings">
+          <ul>
+            
+          </ul>
+        </div>
         {filteredCoins.map(coin => {
           return (
+            <>
+            
             <Coin
               key={coin.id} name={coin.name} image={coin.image} price={coin.current_price} symbol={coin.symbol} change={coin.price_change_percentage_24h}
             />
+            </>
           );
         })}
       </div>
